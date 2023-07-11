@@ -1,20 +1,9 @@
 //import {google} from 'googleapis'
+const { auth, spreadsheetId, range, valueInputOption, insertDataOption } = require('./config/config');
 
 const { google } = require('googleapis');
 
 const sheets = google.sheets('v4');
-
-// Configurar as credenciais da API
-const auth = new google.auth.GoogleAuth({
-    keyFile: './config/credentials.json',
-    scopes: ['https://www.googleapis.com/auth/spreadsheets']
-});
-//link planilha https://docs.google.com/spreadsheets/d/1EwL4FYiv90GBI1gTZ2_GEhyRfP-k5FDd1_9E5q_ATeE/edit#gid=0
-// Identificar a planilha e a célula que você deseja acessar
-const spreadsheetId = '1EwL4FYiv90GBI1gTZ2_GEhyRfP-k5FDd1_9E5q_ATeE';
-const range = 'Empenhos!A:T';
-const valueInputOption = 'RAW';
-const insertDataOption = 'INSERT_ROWS';
 
 
 
